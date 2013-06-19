@@ -17,15 +17,42 @@ public class Houses
   }
   private static void drawhouse(int height)
   {
-    //   Change the color of the line the tortoise draws to lightGray --#15
     Tortoise.setPenColor(Colors.Grays.LightGray);
     Tortoise.move(height);
-    Tortoise.turn(90);
-    Tortoise.move(30);
-    Tortoise.turn(90);
+    //flatroof();
+    //Airsroof
+    //Mavericksroof
+    //turn left 90
+    mavericksroof();
     Tortoise.move(height);
     Tortoise.turn(-90);
     Tortoise.move(20);
     Tortoise.turn(-90);
+  }
+  private static void mavericksroof()
+  {
+    Tortoise.turn(-90);
+    Tortoise.move(5);
+    Tortoise.turn(135);
+    Tortoise.move(50);
+    Tortoise.turn(90);
+    Tortoise.move(50);
+    Tortoise.turn(135);
+    Tortoise.move(5);
+    Tortoise.turn(-90);
+  }
+  private static void arisroof()
+  {
+    Tortoise.turn(45);
+    Tortoise.move(10);
+    Tortoise.turn(45);
+    Tortoise.move(10);
+    Tortoise.turn(60);
+  }
+  private static void flatroof()
+  {
+    Tortoise.turn(90);
+    Tortoise.move(30);
+    Tortoise.turn(90);
   }
 }
