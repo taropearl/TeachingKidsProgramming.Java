@@ -177,7 +177,7 @@ public class Homework01
    * 
    * 
    */
-  public String ___      = "You need to fill in the blank ___";
+  public String ___      = "You need to fill in the blank";
   public int    ____     = 1;
   int           topSpeed = 10;
   int           counter  = 0;
