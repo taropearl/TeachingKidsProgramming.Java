@@ -23,7 +23,6 @@ public class Houses
     //Airsroof
     //Mavericksroof
     //turn left 90
-    mavericksroof();
     Tortoise.move(height);
     Tortoise.turn(-90);
     Tortoise.move(20);
