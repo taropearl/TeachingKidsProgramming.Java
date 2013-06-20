@@ -108,7 +108,6 @@ public class Homework02
     dreamBigger(); //This method is directly below
     Assert.assertEquals(xmasList, "bike");
   }
-  @Test
   private void dreamBigger()
   {
     String xmasList = "hoppopotamus";
