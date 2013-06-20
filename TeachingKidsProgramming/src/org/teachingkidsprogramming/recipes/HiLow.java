@@ -1,33 +1,41 @@
 package org.teachingkidsprogramming.recipes;
 
+import java.util.Random;
+
 import org.teachingextensions.logo.utils.Sounds;
 import org.teachingextensions.windows.MessageBox;
-
-import com.spun.util.NumberUtils;
 
 public class HiLow
 {
   public static void main(String[] args)
   {
-    int correctnumber = NumberUtils.getRandomInt(1, 100);
-    for (int i = 1; i <= 8; i++)
+    int correctnumber = new Random().nextInt(100);
+    int numberofguesses = 2;
+    for (int i = 1; i <= numberofguesses; i++)
     {
-      int guess = MessageBox.askForNumericalInput("Guess a number between 1 and 100");
+      int chancesLeft = numberofguesses + 1 - i;
+      int guess = MessageBox.askForNumericalInput("Guess a number between 1 and 100 (You have " + chancesLeft
+          + " chances left)");
+      //if the number is not valid then
+      if (guess < 1 || 100 < guess)
+      {
+        MessageBox.showMessage("Your answer, " + guess + ", must be a number between1 and 100");
+      }
       if (guess == correctnumber)
       {
         Sounds.playBeep();
-        MessageBox.showMessage("You won the game!!");
+        MessageBox.showMessage("You won the game. Yay!!");
         System.exit(0);
       }
-      else if (guess > correctnumber)
+      else if (correctnumber < guess)
       {
         MessageBox.showMessage("The number is too high");
       }
-      else if (guess < correctnumber)
+      else
       {
         MessageBox.showMessage("The number is too Low");
       }
     }
-    MessageBox.showMessage("You lose :(");
+    MessageBox.showMessage("You lose,the correct answer is " + correctnumber);
   }
 }
