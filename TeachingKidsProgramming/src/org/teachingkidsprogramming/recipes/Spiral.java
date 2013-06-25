@@ -20,7 +20,6 @@ public class Spiral
     for (int i = 1; i <= 75; i++)
     {
       Tortoise.setPenColor(ColorWheel.getNextColor());
-      //         Move the tortoise 5 times the current line number you are drawing --#5
       Tortoise.move(5 * linenumber++);
       Tortoise.turn(360 / 3);
     }
