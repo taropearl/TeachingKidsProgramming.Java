@@ -9,6 +9,7 @@ public class TurtleTree
   {
     Turtle turtle = new Turtle();
     turtle.setSpeed(10);
+    turtle.getBackgroundWindow().setBackground(Colors.Grays.Black);
     int length = 60;
     drawBranch(turtle, length);
   }
