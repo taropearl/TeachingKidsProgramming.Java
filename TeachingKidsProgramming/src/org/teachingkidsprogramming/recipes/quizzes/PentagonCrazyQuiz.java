@@ -6,16 +6,16 @@ import org.teachingextensions.logo.Tortoise;
 import org.teachingkidsprogramming.recipes.quizzes.graders.PentagonCrazyQuizGrader;
 import org.teachingkidsprogramming.recipes.quizzes.graders.PentagonQuiz;
 
-public class PentagonCrazyQuiz extends PentagonCrazyQuizGrader
+public class PentagonCrazyQuiz extends PentagonQuiz
 {
   public void thread()
   {
+    Tortoise.move(6);
   }
   public void question2()
   {
     for (int i = 1; i <= 76; i++)
     {
-      Tortoise.move(6);
       stitch();
     }
   }
@@ -29,6 +29,6 @@ public class PentagonCrazyQuiz extends PentagonCrazyQuizGrader
   }
   public static void main(String[] args)
   {
-    new PentagonCrazyQuizGrader().grade(new PentagonQuiz());
+    new PentagonCrazyQuizGrader().grade(new PentagonCrazyQuiz());
   }
 }
